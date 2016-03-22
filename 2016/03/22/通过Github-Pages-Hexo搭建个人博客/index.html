@@ -1,10 +1,12 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>通过Github Pages+Hexo搭建个人博客 | Will on the Way</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">通过Github Pages+Hexo搭建个人博客</h1><a id="logo" href="/.">Will on the Way</a><p class="description">The body or soul must be on the way</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="http://github.com/Will-luffy"><i class="fa fa-user"> github</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">通过Github Pages+Hexo搭建个人博客</h1><div class="post-meta">Mar 22, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><a data-disqus-identifier="2016/03/22/通过Github-Pages-Hexo搭建个人博客/" href="/2016/03/22/通过Github-Pages-Hexo搭建个人博客/#disqus_thread" class="disqus-comment-count"></a><div class="post-content"><h3 id="注册Github-Pages"><a href="#注册Github-Pages" class="headerlink" title="注册Github Pages"></a>注册Github Pages</h3><p>github pages是一套静态网站搭建方案，通过github进行代码和服务的托管。github pages主要分两种，user/organization pages和project pages，前者主要用于搭建个人或组织网站，后者主要对应github上的每个repository。</p>
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 通过Github Pages+Hexo搭建个人博客 · Will on the Way</title><meta name="description" content="通过Github Pages+Hexo搭建个人博客 - Will Dong"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/209213718" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/Will-luffy" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">通过Github Pages+Hexo搭建个人博客</h1><div class="post-time">2016年3月22日</div><div class="post-content"><p><strong>注册Github Pages</strong></p>
+<p>github pages是一套静态网站搭建方案，通过github进行代码和服务的托管。github pages主要分两种，user/organization pages和project pages，前者主要用于搭建个人或组织网站，后者主要对应github上的每个repository。</p>
 <ol>
 <li>首先需要有github帐号，如果没有，请自行申请</li>
 <li>创建repository，名称一定要为{username}.github.io，其中{username}为你的github账户名</li>
 <li>在代码库（repository）中增加index.html，然后访问<a href="http://{username}.github.io" target="_blank" rel="external">http://{username}.github.io</a>就能看到index.html的展示了</li>
 </ol>
-<h3 id="通过Automatic-Pages-Generator生成页面"><a href="#通过Automatic-Pages-Generator生成页面" class="headerlink" title="通过Automatic Pages Generator生成页面"></a>通过Automatic Pages Generator生成页面</h3><ul>
+<p><strong>通过Automatic Pages Generator生成页面</strong></p>
+<ul>
 <li>如果是要采用hexo搭建，建议直接跳过该步骤，hexo代码会将这个步骤的代码覆盖</li>
 </ul>
 <ol>
@@ -13,29 +15,27 @@
 <li>编辑Page name、Tagline和Body，Body支持Markdown</li>
 <li>然后点击“Continue to layouts”选择模板</li>
 </ol>
-<h3 id="安装配置Hexo"><a href="#安装配置Hexo" class="headerlink" title="安装配置Hexo"></a>安装配置Hexo</h3><p>Hexo是一款基于Node.js的静态博客框架，简单、快速。</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ul>
+<p><strong>安装配置Hexo</strong></p>
+<p>Hexo是一款基于Node.js的静态博客框架，简单、快速。</p>
+<p><em>安装</em></p>
+<ul>
 <li>首先本地需要安装Node.js、Git</li>
-<li>安装hexo<blockquote>
-<p>npm install -g hexo</p>
-</blockquote>
+<li>安装hexo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; npm install -g hexo</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ul>
+<p><em>配置</em></p>
+<ul>
 <li><p>初始化：新建文件夹hexo（这里我刚开始一直以为是需要将github的代码clone下来，其实不然，这个文件夹只是存放hexo依赖模块、配置文件和源码的地方）</p>
-<blockquote>
-<p>cd hexo<br>hexo init </p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; cd hexo</span><br><span class="line">&gt; hexo init</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>预览</p>
-<blockquote>
-<p>hexo server<br>然后浏览器打开<a href="http://localhost:4000，就能看到生成的博客" target="_blank" rel="external">http://localhost:4000，就能看到生成的博客</a></p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; hexo server</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<p>然后浏览器打开<a href="http://localhost:4000，就能看到生成的博客" target="_blank" rel="external">http://localhost:4000，就能看到生成的博客</a></p>
+<ul>
 <li><p>生成静态页面</p>
-<blockquote>
-<p>hexo generate</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; hexo generate</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>部署：hexo支持多种部署方式，Github、Heroku、Openshift等</p>
 <ul>
@@ -43,26 +43,25 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: &#123;repository url&#125;</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>部署到github</p>
-<blockquote>
-<p>hexo deploy</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; hexo deploy</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>更换主题</p>
+</ul>
 <ul>
+<li>更换主题<ul>
 <li>到<a href="http://hexo.io" target="_blank" rel="external">Hexo官网</a>找到喜爱的主题，获取其github地址</li>
 <li>在hexo/themes目录下，执行git clone ‘主题github地址’</li>
 <li>然后修改hexo/_config.yml, 将theme设置为下载的主题，还可以将language设置为需要的语言（一般主题都支持多种语音）</li>
 </ul>
 </li>
 </ul>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://will-luffy.github.io/2016/03/22/通过Github-Pages-Hexo搭建个人博客/" data-id="cim3lz5nb0000uxs6x7lk34i9" class="article-share-link">分享到</a><div class="tags"><a href="/tags/Github/">Github</a><a href="/tags/Hexo/">Hexo</a></div><div id="disqus_thread"><script>var disqus_shortname = 'will-github';
+</div></article></div></section><footer><div class="paginator"></div><div id="disqus_thread"></div><script>var disqus_shortname = 'will-github';
 var disqus_identifier = '2016/03/22/通过Github-Pages-Hexo搭建个人博客/';
 var disqus_title = '通过Github Pages+Hexo搭建个人博客';
 var disqus_url = 'http://will-luffy.github.io/2016/03/22/通过Github-Pages-Hexo搭建个人博客/';
 (function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();</script><script id="dsq-count-scr" src="//will-github.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://will-luffy.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/通过Github-Pages-Hexo搭建个人博客/">通过Github Pages+Hexo搭建个人博客</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//will-github.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://github.com/Will-luffy" title="github" target="_blank">github</a><ul></ul><a href="http://weibo.com/209213718" title="weibo" target="_blank">weibo</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Will on the Way.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//will-github.disqus.com/count.js" async></script><div class="copyright"><p>© 2016 <a href="http://will-luffy.github.io">Will Dong</a>, unless otherwise noted.</p></div></footer><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

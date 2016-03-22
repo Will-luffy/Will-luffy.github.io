@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Will on the Way</title>
+  <subtitle>The body or soul must be on the way</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://will-luffy.github.io/"/>
+  <updated>2016-03-22T16:23:30.000Z</updated>
+  <id>http://will-luffy.github.io/</id>
+  
+  <author>
+    <name>Will Dong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过Github Pages+Hexo搭建个人博客</title>
+    <link href="http://will-luffy.github.io/2016/03/22/%E9%80%9A%E8%BF%87Github-Pages-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://will-luffy.github.io/2016/03/22/通过Github-Pages-Hexo搭建个人博客/</id>
+    <published>2016-03-21T17:31:00.000Z</published>
+    <updated>2016-03-22T16:23:30.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;注册Github Pages&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;github pages是一套静态网站搭建方案，通过github进行代码和服务的托管。github pages主要分两种，user/organization pages和project pages，前者主要用于搭建个人或组织网站，后者主要对应github上的每个repository。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先需要有github帐号，如果没有，请自行申请&lt;/li&gt;
+&lt;li&gt;创建repository，名称一定要为{username}.github.io，其中{username}为你的github账户名&lt;/li&gt;
+&lt;li&gt;在代码库（repository）中增加index.html，然后访问&lt;a href=&quot;http://{username}.github.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://{username}.github.io&lt;/a&gt;就能看到index.html的展示了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;通过Automatic Pages Generator生成页面&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果是要采用hexo搭建，建议直接跳过该步骤，hexo代码会将这个步骤的代码覆盖&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;进入代码库的setting&lt;/li&gt;
+&lt;li&gt;点击“Launch automatic pages generator”&lt;/li&gt;
+&lt;li&gt;编辑Page name、Tagline和Body，Body支持Markdown&lt;/li&gt;
+&lt;li&gt;然后点击“Continue to layouts”选择模板&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;安装配置Hexo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Hexo是一款基于Node.js的静态博客框架，简单、快速。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;安装&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先本地需要安装Node.js、Git&lt;/li&gt;
+&lt;li&gt;安装hexo&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; npm install -g hexo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;配置&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;初始化：新建文件夹hexo（这里我刚开始一直以为是需要将github的代码clone下来，其实不然，这个文件夹只是存放hexo依赖模块、配置文件和源码的地方）&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; cd hexo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; hexo init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;预览&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后浏览器打开&lt;a href=&quot;http://localhost:4000，就能看到生成的博客&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000，就能看到生成的博客&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;生成静态页面&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;部署：hexo支持多种部署方式，Github、Heroku、Openshift等&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;修改配置文件_config.yml，最下面的deploy修改为如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	type: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	repo: &amp;#123;repository url&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	branch: master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;部署到github&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;更换主题&lt;ul&gt;
+&lt;li&gt;到&lt;a href=&quot;http://hexo.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo官网&lt;/a&gt;找到喜爱的主题，获取其github地址&lt;/li&gt;
+&lt;li&gt;在hexo/themes目录下，执行git clone ‘主题github地址’&lt;/li&gt;
+&lt;li&gt;然后修改hexo/_config.yml, 将theme设置为下载的主题，还可以将language设置为需要的语言（一般主题都支持多种语音）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;注册Github Pages&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;github pages是一套静态网站搭建方案，通过github进行代码和服务的托管。github pages主要分两种，user/organization pages和project pages
+    
+    </summary>
+    
+    
+      <category term="Github" scheme="http://will-luffy.github.io/tags/Github/"/>
+    
+      <category term="Hexo" scheme="http://will-luffy.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
