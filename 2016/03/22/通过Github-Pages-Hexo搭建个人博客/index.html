@@ -49,10 +49,17 @@
 </li>
 </ul>
 <ul>
-<li>更换主题<ul>
-<li>到<a href="http://hexo.io" target="_blank" rel="external">Hexo官网</a>找到喜爱的主题，获取其github地址</li>
-<li>在hexo/themes目录下，执行git clone ‘主题github地址’</li>
-<li>然后修改hexo/_config.yml, 将theme设置为下载的主题，还可以将language设置为需要的语言（一般主题都支持多种语音）</li>
+<li><p>更换主题</p>
+<ul>
+<li>到<a href="http://hexo.io" target="_blank" rel="external">Hexo官网</a>找到喜爱的主题，我选择的apollo</li>
+<li><p>下载并安装，一般各主题的github都有安装说明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; git clone https://github.com/pinggod/hexo-theme-apollo.git themes/apollo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改_config.yml中的theme为选择的主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">theme: apollo</span><br><span class="line">language: zh-cn #修改语言（可选）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>主题的自定义设置，修改_config.yml，通常包括<br>github、rss、disqus、百度统计等</p>
+</li>
 </ul>
 </li>
 </ul>

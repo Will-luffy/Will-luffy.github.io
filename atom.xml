@@ -45,7 +45,7 @@
     <link href="http://will-luffy.github.io/2016/03/22/%E9%80%9A%E8%BF%87Github-Pages-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://will-luffy.github.io/2016/03/22/通过Github-Pages-Hexo搭建个人博客/</id>
     <published>2016-03-21T17:31:00.000Z</published>
-    <updated>2016-03-22T16:23:30.000Z</updated>
+    <updated>2016-03-22T17:36:49.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;注册Github Pages&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;github pages是一套静态网站搭建方案，通过github进行代码和服务的托管。github pages主要分两种，user/organization pages和project pages，前者主要用于搭建个人或组织网站，后者主要对应github上的每个repository。&lt;/p&gt;
@@ -98,10 +98,17 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
-&lt;li&gt;更换主题&lt;ul&gt;
-&lt;li&gt;到&lt;a href=&quot;http://hexo.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo官网&lt;/a&gt;找到喜爱的主题，获取其github地址&lt;/li&gt;
-&lt;li&gt;在hexo/themes目录下，执行git clone ‘主题github地址’&lt;/li&gt;
-&lt;li&gt;然后修改hexo/_config.yml, 将theme设置为下载的主题，还可以将language设置为需要的语言（一般主题都支持多种语音）&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;更换主题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;到&lt;a href=&quot;http://hexo.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo官网&lt;/a&gt;找到喜爱的主题，我选择的apollo&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载并安装，一般各主题的github都有安装说明&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; git clone https://github.com/pinggod/hexo-theme-apollo.git themes/apollo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改_config.yml中的theme为选择的主题&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;theme: apollo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;language: zh-cn #修改语言（可选）&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;主题的自定义设置，修改_config.yml，通常包括&lt;br&gt;github、rss、disqus、百度统计等&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
