@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://will-luffy.github.io/"/>
-  <updated>2016-03-22T16:40:34.000Z</updated>
+  <updated>2016-04-12T17:27:05.000Z</updated>
   <id>http://will-luffy.github.io/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常见Git Workflow介绍（待完善）</title>
+    <link href="http://will-luffy.github.io/2016/04/13/%E8%B7%A8%E5%9C%B0%E5%9F%9F%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98/"/>
+    <id>http://will-luffy.github.io/2016/04/13/跨地域数据库延迟问题/</id>
+    <published>2016-04-12T16:41:00.000Z</published>
+    <updated>2016-04-12T17:27:05.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;remember that these workflows are designed to be guidelines rather than concrete rules&lt;br&gt;                        – Atlassian Git Tutorials&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们是做研发工具平台的，虽然笔者主要负责的是敏捷项目管理工具的研发，但一方面git是我们开发的常用工具之一，另一方面我们正在摸索项目管理与代码开发、编辑发布的流程打通，无可厚非得就需要对git工作流多加了解，这里做一些总结沉淀，希望和大家一起学习探讨。&lt;/p&gt;
+&lt;p&gt;如果大家对git还不是很熟悉，可以先阅读一下atlassian提供的&lt;a href=&quot;https://www.atlassian.com/git/tutorials&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git tutorials&lt;/a&gt;，介绍的很详细，排版也很舒服。&lt;/p&gt;
+&lt;p&gt;本文主要介绍4种常见的git workflow：Centralized Workflow、Feature Branch Workflow、GitFlow Workflow和Forking Workflow。&lt;/p&gt;
+&lt;h3 id=&quot;Centralized-Workflow&quot;&gt;&lt;a href=&quot;#Centralized-Workflow&quot; class=&quot;headerlink&quot; title=&quot;Centralized Workflow&quot;&gt;&lt;/a&gt;Centralized Workflow&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/centralized-workflow/01.svg&quot; alt=&quot;&quot;&gt;&lt;br&gt;Centerlized Workflow可以类比我们传统的svn主干开发，开发人员都是基于一条主干开发新的feature，有别于svn的trunk，git的主干叫做master。&lt;/p&gt;
+&lt;p&gt;首先需要一个中心化的远端代码库，通过下面命令可以创建一个远端的代码库。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh user@host git init --bare /path/to/repo.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后每个人将主干的代码clone到本地。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone ssh://user@host/path/to/repo.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后就可以在本地的代码进行开发了，开发时可以随时查看status、add和commit&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git status # View the state of the repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git add &amp;lt;some-file&amp;gt; # Stage a file&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git commit # Commit a file&amp;lt;/some-file&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;开发完提交代码，如果在你之前主干已经有新的变动，你需要先将新的变动pull到本地，然后再push到主干&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git pull --rebase origin master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git push origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--rebase&lt;/code&gt;主要是将由多个merge commit的构成的历史改写为一条线性的历史。&lt;/p&gt;
+&lt;h6 id=&quot;优势&quot;&gt;&lt;a href=&quot;#优势&quot; class=&quot;headerlink&quot; title=&quot;优势&quot;&gt;&lt;/a&gt;优势&lt;/h6&gt;&lt;h6 id=&quot;劣势&quot;&gt;&lt;a href=&quot;#劣势&quot; class=&quot;headerlink&quot; title=&quot;劣势&quot;&gt;&lt;/a&gt;劣势&lt;/h6&gt;&lt;h6 id=&quot;适用场景&quot;&gt;&lt;a href=&quot;#适用场景&quot; class=&quot;headerlink&quot; title=&quot;适用场景&quot;&gt;&lt;/a&gt;适用场景&lt;/h6&gt;&lt;h3 id=&quot;Feature-Branch-Workflow&quot;&gt;&lt;a href=&quot;#Feature-Branch-Workflow&quot; class=&quot;headerlink&quot; title=&quot;Feature Branch Workflow&quot;&gt;&lt;/a&gt;Feature Branch Workflow&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/feature-branch-workflow/01.svg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;GitFlow-Workflow&quot;&gt;&lt;a href=&quot;#GitFlow-Workflow&quot; class=&quot;headerlink&quot; title=&quot;GitFlow Workflow&quot;&gt;&lt;/a&gt;GitFlow Workflow&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/05.svg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Forking-Workflow&quot;&gt;&lt;a href=&quot;#Forking-Workflow&quot; class=&quot;headerlink&quot; title=&quot;Forking Workflow&quot;&gt;&lt;/a&gt;Forking Workflow&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/01.svg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;remember that these workflows are designed to be guidelines rather than concrete rules&lt;br&gt;                        – Atlassia
+    
+    </summary>
+    
+      <category term="git" scheme="http://will-luffy.github.io/categories/git/"/>
+    
+    
+      <category term="git workflow" scheme="http://will-luffy.github.io/tags/git-workflow/"/>
+    
+  </entry>
   
   <entry>
     <title>使用gson反序列化json时限定字段不能为空</title>
